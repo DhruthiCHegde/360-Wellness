@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite' // Add this for Tailwind v4
 
-// https://vitejs.dev
 export default defineConfig({
-  plugins: [react()],
-  base: '/360-Wellness/',
+  plugins: [
+    react(),
+    tailwindcss(), // Ensure Tailwind plugin is active
+  ],
+  base: '/360-Wellness/', 
 })
