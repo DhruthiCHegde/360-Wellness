@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wellness | Cinematic Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Outfit:wght@500;800&display=swap"
+    rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-C1JhDiQB.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B7SJFfF7.css">
+</head>
+
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Procedural Immersive Background Blobs -->
+  <div class="fixed inset-0 overflow-hidden z-0 pointer-events-none">
+    <div id="blob-1"
+      class="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-glow-blue/20 blur-[150px] rounded-full transition-colors duration-1000">
+    </div>
+    <div id="blob-2"
+      class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-glow-cyan/20 blur-[150px] rounded-full transition-colors duration-1000">
+    </div>
+    <div id="blob-3"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vw] bg-purple-500/10 blur-[180px] rounded-full transition-colors duration-1000 opacity-0">
+    </div>
+  </div>
+
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- Hero Section -->
+      <section class="section-full hero-section" id="hero">
+        <div class="hero-content-wrapper z-10 text-center px-6">
+          <div class="hero-main-title">
+            <h1 class="hero-title mb-2">
+              360° WELLNESS
+            </h1>
+            <p class="text-lg md:text-xl mb-12 font-sans font-medium text-white/90">
+              Mind, Body & Finance in Harmony
+            </p>
+            <button id="explore-journey" class="explore-journey-btn">
+              EXPLORE YOUR JOURNEY
+            </button>
+          </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0 scroll-indicator">
+          <div class="mouse-icon">
+            <div class="mouse-wheel"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 360 Wellness Carousel Stage -->
+      <section class="section-full stage-container overflow-hidden" id="wellness-stage">
+        <div class="stage-overlay z-0"></div>
+        <div class="carousel-3d-wrapper flex items-center justify-center w-full h-full relative perspective-2000">
+
+          <div class="carousel-3d-container flex items-center justify-center w-full h-full relative"
+            id="wellness-carousel">
+
+            <!-- Mental Card -->
+            <div class="wellness-card-3d mental-card" data-type="mental">
+              <div class="card-image-wrapper">
+                <img src="/images/wellness/mental.png" alt="Mental Wellness" class="card-bg-img">
+              </div>
+              <div class="card-content-360">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 font-display">MENTAL<br />WELLNESS</h2>
+                <p class="text-lg text-white/80 mb-8 max-w-sm font-sans font-medium">Nurture stillness and clarity.</p>
+                <button class="explore-btn-premium glow-btn" data-type="mental">EXPLORE →</button>
+              </div>
+              <div class="card-glow-360"></div>
+            </div>
+
+            <!-- Physical Card -->
+            <div class="wellness-card-3d physical-card active" data-type="physical">
+              <div class="card-image-wrapper">
+                <img src="/images/wellness/physical.png" alt="Physical Wellness" class="card-bg-img">
+              </div>
+              <div class="card-content-360">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 font-display">PHYSICAL<br />WELLNESS</h2>
+                <p class="text-lg text-white/80 mb-8 max-w-sm font-sans font-medium">Strength and natural ocean rhythms.
+                </p>
+                <button class="explore-btn-premium glow-btn" data-type="physical">EXPLORE →</button>
+              </div>
+              <div class="card-glow-360"></div>
+            </div>
+
+            <!-- Financial Card -->
+            <div class="wellness-card-3d financial-card" data-type="financial">
+              <div class="card-image-wrapper">
+                <img src="/images/wellness/financial.png" alt="Financial Wellness" class="card-bg-img">
+              </div>
+              <div class="card-content-360">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 font-display">FINANCIAL<br />WELLNESS</h2>
+                <p class="text-lg text-white/80 mb-8 max-w-sm font-sans font-medium">Secure futures and abundance.</p>
+                <button class="explore-btn-premium glow-btn" data-type="financial">EXPLORE →</button>
+              </div>
+              <div class="card-glow-360"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Orbital Nav Indicators -->
+        <div class="orbital-nav absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-4 z-20">
+          <button class="nav-orb active" data-index="0"></button>
+          <button class="nav-orb" data-index="1"></button>
+          <button class="nav-orb" data-index="2"></button>
+        </div>
+      </section>
+
+      <!-- Global Footer -->
+      <footer class="w-full py-8 px-8 relative z-10 border-t border-white/5 bg-transparent">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+          <div class="footer-left text-center md:text-left">
+            <h3 class="text-xl font-display font-black mb-2 uppercase tracking-tighter">WELLNESS JOURNEY</h3>
+            <p class="text-white/60 font-sans text-xs max-w-sm mb-4 transition-colors duration-500 theme-text-alt">
+              For more details, refer to the <a
+                href="https://people.zoho.in/fyershrms/zp#files/orgfile-catId:46493000000196190" target="_blank"
+                class="text-glow-cyan hover:underline transition-all">Policy Section</a> in Zoho People.
+            </p>
+            <span class="text-[9px] font-black uppercase tracking-[0.4em] opacity-30">© 2026 Fyers | 360 Wellness</span>
+          </div>
+
+          <div class="footer-right flex items-center gap-8">
+            <div class="certification-wrapper group relative">
+              <img src="/images/Certificate.png" alt="Great Place to Work Certified"
+                class="w-20 md:w-24 transition-all duration-700 group-hover:scale-110 filter drop-shadow-2xl">
+              <div
+                class="absolute -inset-4 bg-white/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Disney-inspired Premium Modal -->
+  <div id="modal-overlay"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-white/95 backdrop-blur-2xl opacity-0 pointer-events-none transition-opacity duration-500">
+
+    <div id="modal-container"
+      class="w-[95%] h-[90vh] max-w-7xl flex relative overflow-hidden rounded-[40px] shadow-2xl scale-95 opacity-0 transition-all duration-700 bg-white">
+
+      <!-- Grid View (Step 1) -->
+      <div id="modal-grid-view" class="w-full h-full flex flex-col p-8 md:p-12 z-10 overflow-hidden">
+        <header class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
+          <div class="flex items-center gap-4">
+            <h2 id="grid-main-title"
+              class="text-4xl md:text-5xl font-black font-display uppercase tracking-tighter text-black">Characters</h2>
+          </div>
+
+          <button id="close-modal-grid"
+            class="text-3xl text-black hover:scale-110 transition-transform font-light leading-none">✕</button>
+        </header>
+
+        <!-- Horizontal Scroll Container with Side Arrows -->
+        <div class="flex-1 flex items-center relative group/carousel px-4">
+          <!-- Side Navigation Arrows -->
+          <button id="prev-card"
+            class="absolute left-0 top-1/2 -translate-y-1/2 z-30 w-16 h-full flex items-center justify-center text-5xl font-thin text-black/20 hover:text-black hover:bg-black/5 transition-all duration-300">
+            ‹
+          </button>
+
+          <div id="cards-container"
+            class="flex gap-8 md:gap-12 pb-12 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-8 md:px-12 w-full">
+            <!-- Cards will be injected here -->
+          </div>
+
+          <button id="next-card"
+            class="absolute right-0 top-1/2 -translate-y-1/2 z-30 w-16 h-full flex items-center justify-center text-5xl font-thin text-black/20 hover:text-black hover:bg-black/5 transition-all duration-300">
+            ›
+          </button>
+        </div>
+
+        <!-- Carousel Footer -->
+        <footer class="h-12 flex items-center justify-center">
+          <span class="text-gray-300 text-[10px] font-black uppercase tracking-[0.3em]">360 Wellness Journey</span>
+        </footer>
+      </div>
+
+      <!-- Detail View (Step 2) - Hidden by default -->
+      <div id="modal-detail-view"
+        class="w-full h-full flex absolute inset-0 translate-x-full transition-transform duration-700 bg-white z-20">
+        <!-- Sidebar -->
+        <aside
+          class="w-16 md:w-24 h-full border-r border-gray-100 flex flex-col justify-between py-12 items-center bg-white z-20">
+          <button id="back-to-grid"
+            class="text-gray-400 hover:text-black transition-colors font-bold text-xl">←</button>
+
+          <div class="vertical-text flex flex-col items-center">
+            <span id="sidebar-category" class="text-gray-300 text-sm uppercase tracking-widest mb-12">Category</span>
+            <span id="sidebar-title" class="text-4xl md:text-5xl font-bold text-black opacity-100 rotate-180"
+              style="writing-mode: vertical-rl;">Sadness</span>
+          </div>
+
+          <div class="w-1 h-1 bg-gray-200 rounded-full"></div>
+        </aside>
+
+        <!-- Detail Content -->
+        <div class="flex-1 flex flex-col relative">
+          <header class="h-24 flex items-center justify-between px-12 z-20">
+            <div class="flex items-center gap-2">
+              <span class="font-display font-black text-2xl uppercase tracking-tighter">Wellness</span>
+            </div>
+            <button id="close-modal-detail"
+              class="text-3xl text-black hover:scale-110 transition-transform font-light leading-none">✕</button>
+          </header>
+
+          <div class="flex-1 px-8 md:px-20 pb-12 flex flex-col justify-center relative">
+            <!-- Background Shaped Card -->
+            <div id="modal-bg-shape"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[75%] rounded-[60px] z-0 transition-colors duration-500">
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center relative z-10 h-full md:gap-20">
+              <!-- Big Character Detail -->
+              <div class="w-full md:w-1/2 flex justify-center mb-8 md:mb-0 relative py-10 h-full items-center">
+                <div id="detail-char-container" class="relative group">
+                  <div class="char-glow absolute inset-0 blur-[100px] opacity-40 transition-colors duration-500"></div>
+                  <div id="detail-image-fallback"
+                    class="w-64 h-64 md:w-96 md:h-96 rounded-full relative z-10 transition-all duration-700 shadow-2xl modal-pop-out">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content Text -->
+              <div class="w-full md:w-1/2 flex flex-col text-white">
+                <h2 id="modal-title" class="text-5xl md:text-8xl font-black mb-2 font-display">Sadness</h2>
+                <div class="flex items-center gap-4 mb-6">
+                  <span class="text-sm opacity-60 uppercase tracking-widest font-bold"></span>
+                  <span id="modal-category-name"
+                    class="px-3 py-1 bg-white/20 rounded-full text-xs font-bold uppercase tracking-widest">Wellness
+                    Journey</span>
+                </div>
+                <p id="modal-description" class="text-lg opacity-80 leading-relaxed max-w-md">
+                  Detailed journey insights...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
